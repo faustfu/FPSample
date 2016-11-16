@@ -91,3 +91,46 @@ console.log('2)print array=' +
 // console.log('4)print number=' +
 //     newStr(50)
 // );
+
+// //
+// function performCommandHardCoded(command) {
+//     var result;
+
+//     switch (command.type) {
+//         case 'notify':
+//             result = notify(command.message);
+//             break;
+//         case 'join':
+//             result = changeView(command.target);
+//             break;
+//         default:
+//             alert(command.type);
+//     }
+
+//     return result;
+// }
+
+// performCommandHardCoded({type: 'notify', message:'Hi!'});
+// performCommandHardCoded({type: 'join', target:'waiting-room'});
+// performCommandHardCoded({type: 'wait'});
+
+// function isa(type, action) {
+//     return function(obj) {
+//         if (type === obj.type) {
+//             return action(obj);
+//         }
+//     }
+// }
+
+// var performCommand = dispatch(
+//     isa('notify', function(obj) { return notify(obj.message); }),
+//     isa('join', function(obj) { return changeView(obj.target); }),
+//     function(obj) { alert(obj.type); }
+// );
+// performCommand({type: 'join', target: 'foo'});
+
+// //
+// var performAdminCommand = dispatch(
+//     isa('kill', function(obj) { return shutdown(obj.hostname); }),
+//     performCommand
+// );
