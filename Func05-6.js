@@ -78,18 +78,19 @@ var preSquareCheck = condition1(
     validator('arg must be a number', _.isNumber)
 );
 
-// console.log('1)print check if 10 is valid=' +
-//     preSquareCheck(_.identity, 10)
-// );
+console.log('1)print check if 10 is valid=' +
+    preSquareCheck(_.identity, 10)
+);
 
-// console.log('2)print check if empty string is valid=' +
-//     preSquareCheck(_.identity, '')
-// );
+console.log('2)print check if empty string is valid=' +
+    preSquareCheck(_.identity, '')
+);
 
-// console.log('3)print check if 0 is valid=' +
-//     preSquareCheck(_.identity, 0)
-// );
+console.log('3)print check if 0 is valid=' +
+    preSquareCheck(_.identity, 0)
+);
 
+//
 function uncheckedSquare(n) {
     return n * n;
 }
@@ -106,30 +107,31 @@ var postSquareCheck = condition1(
     validator('result should be positive', greaterThan(0))
 );
 
-// console.log('5)print check result 0=' +
-//     postSquareCheck(_.identity, 0)
-// );
+console.log('5)print check result 0=' +
+    postSquareCheck(_.identity, 0)
+);
 
-// console.log('6)print check result -1=' +
-//     postSquareCheck(_.identity, -1)
-// );
+console.log('6)print check result -1=' +
+    postSquareCheck(_.identity, -1)
+);
 
-// console.log('7)print check result ""=' +
-//     postSquareCheck(_.identity, '')
-// );
+console.log('7)print check result ""=' +
+    postSquareCheck(_.identity, '')
+);
 
-// console.log('7)print check result 100=' +
-//     postSquareCheck(_.identity, 100)
-// );
+console.log('7)print check result 100=' +
+    postSquareCheck(_.identity, 100)
+);
 
+//
 var megaCheckedSquare = _.compose(partial1(postSquareCheck, _.identity), checkedSquare);
 
-// console.log('8)print mega check 10=' +
-//     megaCheckedSquare(10)
-// );
+console.log('8)print mega check 10=' +
+    megaCheckedSquare(10)
+);
 
-// console.log('9)print mega check 0=' +
-//     megaCheckedSquare(0)
-// );
+console.log('9)print mega check 0=' +
+    megaCheckedSquare(0)
+);
 
 
